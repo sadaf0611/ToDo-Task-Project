@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Practice</title>
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+.align-center{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+        <div class="row">
+            <div class="col-12" style="background-color: #2b6777;">
+                <header id="main-header" class="text-white p-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="cal-md-6">
+                                <h1>To-Do Task</h1>
+                            </div>
+                            <div class="col-md-9 align-self-center">
+                                <form class="form-inline mb-3" onsubmit=formfunction(event) >
+                                    <label>ToDo Title:</label>
+                                    <input type="text" class="form-control mr-2" id="title" placeholder="ToDo Title...">
+                                    <label>ToDo Discription:</label>
+                                    <input type="text" class="form-control mr-2" id="disc" placeholder="ToDo Discription...">
+                                    <!-- <button id='submit' type="submit" class="btn btn-success">submit</button> -->
+                                    <input id='submit' type="submit" class="btn btn-dark" value="submit">
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="row" style="max-height: 100%;">
+            <div class="col-6" style="background-color: #52ab98 ">
+                <h2 class="align-center">Remaining</h2>
+                <!-- <ul id="remaining-ul"></ul> -->
+                <table id="remaining" class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Discription</th>
+                            <th scope="col">Events</th>
+                            <!-- <th></th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="done-tbody">
+
+                    </tbody>
+                </table>
+                    
+            </div>
+            <div class="col-6" style="background-color: #B2B7BD;"> <!-- #6FB3B8     #BADFE7 -->
+                <h2 class="align-center">Done</h2>
+                <ul id="done-ul"></ul>
+                <table id="done" class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Discription</th>
+                        </tr>
+                    </thead>
+                    <tbody id="remaining-tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="script1.js"></script>
+
+
+     
+</body>
+</html> 
